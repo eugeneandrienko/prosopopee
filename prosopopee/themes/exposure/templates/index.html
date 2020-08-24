@@ -8,21 +8,6 @@
 {% endif %}
 {% endblock %}
 
-{% block logo %}
-{% if sub_index %}
-<div class="back-to-home">
-  <hr>
-  <a href="../">
-    <div id="logo" src="static/img/logo.svg">
-      Back
-    </div>
-  </a>
-</div>
-{% else %}
-<img id="logo" src="static/img/logo.svg"/>
-{% endif %}
-{% endblock %}
-
 {% block content %}
 <div class="galleries-grid">
   {% for galleries_line in galleries|batch(3) %}
