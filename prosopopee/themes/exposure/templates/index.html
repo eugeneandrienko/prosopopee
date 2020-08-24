@@ -29,12 +29,12 @@
         <video autoplay loop muted class="fillWidth">
           <source src="{{ video }}" type="video/webm" data-source="{{ video }}" data-format="vp8" data-extension="webm">
         </video>
-        <img class="fillWidth" alt="" src="{{ video.generate_thumbnail("900") }}">
+        <img class="fillWidth" alt="" src="{{ video.generate_thumbnail("600") }}">
       </div>
       {% else %}
       {% set cover = Image(gallery.cover) %}
       {{ cover.copy() }}
-      <div class="gallery-cover" style="background-image: url('{{ cover.generate_thumbnail("x900") }}');"></div>
+      <div class="gallery-cover" style="background-image: url('{{ cover.generate_thumbnail("x600") }}');"></div>
       {% endif %}
     </div><!-- comment tricks against space between inline-block
     -->{% endfor %}<!-- comment tricks against space between inline-block
